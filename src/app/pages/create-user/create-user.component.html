@@ -1,0 +1,146 @@
+<div class="row">
+    <div class="col-12">
+        <div class="container">
+            <form class="row g-3 needs-validation"
+                  novalidate>
+
+                <div class="row mb-3">
+
+                    <div class="col-md-4 ">
+                        <label for="fullName"
+                               class="form-label">Full name</label>
+                        <input type="text"
+                               [disabled]="loggedUserId != 0"
+                               name=""
+                               name="FullName"
+                               [(ngModel)]="userObj.FullName"
+                               class="form-control"
+                               id="fullName"
+                               required>
+                        <div class="invalid-feedback">
+                            Full Name is required
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="email"
+                               class="form-label">Email</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text"
+                                  id="inputGroupPrepend">&#64;</span>
+                            <input type="text"
+                                   [disabled]="loggedUserId != 0"
+                                   name="EmailId"
+                                   [(ngModel)]="userObj.EmailId"
+                                   class="form-control"
+                                   id="email"
+                                   aria-describedby="inputGroupPrepend"
+                                   required>
+                            <div class="invalid-feedback">
+                                Please enter an email.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+
+
+
+                    <div class="col-md-4">
+                        <label for="addressLine1"
+                               class="form-label">Address Line 1</label>
+                        <input type="text"
+                               [disabled]="loggedUserId != 0"
+                               name="AddressLine1"
+                               [(ngModel)]="userObj.AddressLine1"
+                               class="form-control"
+                               id="addressLine1">
+                        <div class="invalid-feedback">
+                            Please provide a valid Address.
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="addressLine2"
+                               class="form-label">Address Line 2</label>
+                        <input type="text"
+                               [disabled]="loggedUserId != 0"
+                               name="AddressLine2"
+                               [(ngModel)]="userObj.AddressLine2"
+                               class="form-control"
+                               id="addressLine2">
+                        <div class="invalid-feedback">
+                            Please provide a valid Address.
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="city"
+                               class="form-label">City</label>
+                        <input type="text"
+                               [disabled]="loggedUserId != 0"
+                               name="City"
+                               [(ngModel)]="userObj.City"
+                               class="form-control"
+                               id="city"
+                               required>
+                        <div class="invalid-feedback">
+                            Please provide a valid city.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+
+                    <div class="col-md-4">
+                        <label for="password"
+                               class="form-label">Password</label>
+                        <input type="password"
+                               [disabled]="loggedUserId != 0"
+                               name="Password"
+                               [(ngModel)]="userObj.Password"
+                               class="form-control"
+                               id="password"
+                               required>
+                        <div class="invalid-feedback">
+                            Password is required
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <label for="profilePicUrl"
+                               class="form-label">profilePicUrl</label>
+                        <input type="text"
+                               [disabled]="loggedUserId == 0"
+                               name="profilePicUrl"
+                               [(ngModel)]="userObj.ProfilePicUrl"
+                               class="form-control"
+                               id="profilePicUrl"
+                               required>
+
+                    </div>
+                    <div class="col-6">
+                        <img class="img-thumbnail rounded float-start"
+                             [src]="userObj.ProfilePicUrl"
+                             alt="">
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    @if (userObj.UserId != 0 ) {
+                    <button class="btn btn-primary"
+                            type="submit"
+                            (click)="updateUser()">Update form</button>
+
+                    } @else {
+                    <button class="btn btn-primary"
+                            type="submit"
+                            (click)="creatUser()">Submit form</button>
+                    }
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

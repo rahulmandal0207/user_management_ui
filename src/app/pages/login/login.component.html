@@ -1,0 +1,17 @@
+<div class="login-page">
+       <div class="form">
+              <form class="login-form">
+                     <input type="email"
+                            placeholder="username"
+                            name="email"
+                            [(ngModel)]="loginData.EmailId" />
+                     <input type="password"
+                            placeholder="password"
+                            name="password"
+                            [(ngModel)]="loginData.Password" />
+                     <button type="button"
+                             (click)="onLogin()">login</button>
+                     <p class="message">Not registered? <a href="#">Create an account</a></p>
+              </form>
+       </div>
+</div>
