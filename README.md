@@ -1,27 +1,48 @@
-# UserManagementUI
+# User Management UI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
+## Overview
 
-## Development server
+User Management UI is a web application designed to manage user accounts efficiently. It provides functionalities to create, read, update, and delete user information.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- User authentication and authorization
+  - Separate login for admin and users
+- Create, read, update, and delete user profiles
+  - Admin can create, edit, and delete user accounts
+  - Users can view their own information and upload a profile picture
+- Role-based access control
+  - Admins have full access to all functionalities
+  - Users have restricted access to their own data
+- Responsive design for mobile and desktop
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/rahulmandal0207/user_management_ui.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd UserManagementUI
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Usage
 
-## Running unit tests
+1. Start the development server:
+   ```bash
+   npm start
+   ```
+2. Open your browser and navigate to `http://localhost:4200`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Contributing
 
-## Running end-to-end tests
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## License
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
